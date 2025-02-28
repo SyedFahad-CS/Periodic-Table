@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" rx="4" fill="#2563eb"/>
+  
+  <!-- Element Symbol -->
+  <text x="16" y="19" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="middle">H</text>
+  
+  <!-- Atomic Number -->
+  <text x="5" y="9" font-family="system-ui,-apple-system,sans-serif" font-size="7" fill="white" opacity="0.9">1</text>
+  
+  <!-- Atomic Mass -->
+  <text x="16" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="6" fill="white" opacity="0.9" text-anchor="middle">1.008</text>
+</svg> 
