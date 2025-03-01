@@ -58,20 +58,14 @@ export function PeriodicTable({ elements, searchQuery }: PeriodicTableProps) {
         ← Scroll →
       </div>
       
-      {/* Scrollable container */}
-      <div className="w-full overflow-x-auto pb-4 -mx-2 px-2 md:mx-0 md:px-0">
-        <div className="min-w-[900px] w-full max-w-[1800px] mx-auto space-y-4">
+      {/* Table container */}
+      <div className="w-full overflow-x-auto pb-8">
+        <div className="min-w-[1000px] w-full max-w-[1600px] mx-auto space-y-2">
           {/* Main periodic table */}
-          <div className="grid grid-cols-18 gap-0.5 sm:gap-1 scale-[0.65] sm:scale-75 md:scale-90 lg:scale-100 origin-top">
+          <div className="grid grid-cols-[repeat(18,minmax(0,1fr))] gap-1.5 mb-4">
             {filteredElements.map((element) => {
-              // Skip lanthanides except La
-              if (element.category === "lanthanoid" && element.number !== 57) {
-                return null;
-              }
-              // Skip actinides except Ac
-              if (element.category === "actinoid" && element.number !== 89) {
-                return null;
-              }
+              if (element.category === "lanthanoid" && element.number !== 57) return null;
+              if (element.category === "actinoid" && element.number !== 89) return null;
               return (
                 <ElementCard
                   key={element.number}
@@ -86,7 +80,7 @@ export function PeriodicTable({ elements, searchQuery }: PeriodicTableProps) {
 
           {/* Lanthanides */}
           {showLanthanidesRow && filteredLanthanides.length > 0 && (
-            <div className="grid grid-cols-15 gap-0.5 sm:gap-1 ml-[8.33%] scale-[0.65] sm:scale-75 md:scale-90 lg:scale-100 origin-top">
+            <div className="grid grid-cols-[repeat(15,minmax(0,1fr))] gap-1.5 ml-[8.33%] mb-2">
               {filteredLanthanides.map((element, index) => (
                 <ElementCard
                   key={element.number}
@@ -101,7 +95,7 @@ export function PeriodicTable({ elements, searchQuery }: PeriodicTableProps) {
 
           {/* Actinides */}
           {showActinidesRow && filteredActinides.length > 0 && (
-            <div className="grid grid-cols-15 gap-0.5 sm:gap-1 ml-[8.33%] scale-[0.65] sm:scale-75 md:scale-90 lg:scale-100 origin-top">
+            <div className="grid grid-cols-[repeat(15,minmax(0,1fr))] gap-1.5 ml-[8.33%]">
               {filteredActinides.map((element, index) => (
                 <ElementCard
                   key={element.number}
