@@ -65,8 +65,8 @@ export function ElementCard({ element, isSelected, onClick, onHoverSelect }: Ele
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "aspect-[4/5] p-2 rounded-xl transition-all duration-200 text-left",
-        "hover:shadow-lg hover:scale-105 active:scale-100 select-none",
+        "aspect-[4/5] p-2 rounded-lg transition-all duration-200 text-left",
+        "hover:shadow-lg hover:scale-120 active:scale-100 select-none",
         "flex flex-col w-full",
         categoryColors[element.category.toLowerCase() as CategoryType],
         isSelected && "ring-2 ring-primary ring-offset-2 dark:ring-offset-background"
@@ -77,8 +77,8 @@ export function ElementCard({ element, isSelected, onClick, onHoverSelect }: Ele
       }}
     >
       <div className="text-xs opacity-80 mb-2">{element.number}</div>
-      <div className="text-xl font-bold mb-1">{element.symbol}</div>
-      <div className="text-[0.65rem] font-medium truncate opacity-90 mb-0.5">{element.name}</div>
+      <div className="text-lg font-bold mb-1">{element.symbol}</div>
+      <div className="text-[0.55rem] font-medium truncate opacity-90 mb-0.5">{element.name}</div>
       <div className="text-[0.6rem] opacity-80">
         {element.atomicMass.toFixed(2)}
       </div>
